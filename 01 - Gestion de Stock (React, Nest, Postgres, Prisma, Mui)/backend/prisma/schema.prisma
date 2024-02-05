@@ -21,6 +21,7 @@ model Store {
   id            String          @id @default(uuid()) @db.Uuid
   name          String          @unique
   store_product Store_Product[]
+  
 }
 
 model Product {

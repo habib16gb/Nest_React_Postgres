@@ -16,7 +16,7 @@ export class StoreService {
     try {
       const newStore = await this.prisma.store.create({
         data: {
-          name: createStoreDto.name,
+          name: createStoreDto.name.trim(),
         },
       });
       return newStore;
